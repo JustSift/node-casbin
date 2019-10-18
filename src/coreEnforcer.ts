@@ -358,7 +358,7 @@ export class CoreEnforcer {
         parameters[token] = '';
       });
 
-      const result = await expression({ ...parameters, ...functions });
+      const result = expression({ ...parameters, ...functions });
 
       if (result) {
         policyEffects[0] = Effect.Allow;
